@@ -1,7 +1,6 @@
 # Level Input File Format Guide
 
-Any AI can create a valid `level_input.txt` file using this repository to produce Geometry Dash levels using GDShare. If you are the user, please visit the User Manual below for directions. Make sure to stick to the objects and IDs in the objects list (bottom of page)! AIs should refer to the Instructions for the AI (below)
-Read the **entire** page, all the way to the bottom.
+Any AI can create a valid `level_input.txt` file using this repository to produce Geometry Dash levels using GDShare. If you are the user, please visit the User Manual below for directions. Stick to the objects and IDs in the objects list (bottom of page)! AIs should refer to the Instructions for the AI (below). Read the **entire** page, all the way to the bottom.
 
 ---
 
