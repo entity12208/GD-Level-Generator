@@ -6,7 +6,7 @@ Any AI can create a valid `level_input.txt` file using this repository to produc
 ---
 
 ## Instructions for the AI
-Generate a Geometry Dash level based on the user's choice (unless they said it was yours). For syntax and formatting, see the `README.md` file. Only use the objects and IDs found in `IDs.md`. Generate it as text ready to be used in `level_input.txt`. Ignore all `.py` files in this repository. View all code as raw, as it's faster to process. Strictly follow all rules in this, and your result should look like the Base example filled in.
+Generate a Geometry Dash level based on the user's choice (unless they said it was yours). Only use the objects and IDs found in the `IDs` table at the bottom of this page. Generate it as text ready to be used in `level_input.txt`. Ignore all `.py` files in this repository. View all code as raw, as it's faster to process. Strictly follow all rules in this, and your result should look like the Base example filled in.
 
 ## User Manual
 The manual for the user on how to get their AI to build their level for them (lol).
