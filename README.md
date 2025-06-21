@@ -89,5 +89,5 @@ level = [
     [id: 10, col: 2, pos: 1200,0, gid: -1, lay: 1, ext: "", rot: 180, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0]
 ]
 ```
-
-For finding Object IDs, use GD Colon's level. A video of this level can be found [here](https://youtu.be/c4DpuuGbGXA?si=FX9qTuSU1eTvOBhu)
+### Object IDs
+Common object IDs can be found [here](https://github.com/entity12208/GD-Level-Generator/blob/main/IDs.md)
