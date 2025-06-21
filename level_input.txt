@@ -1,8 +1,15 @@
 name: "My Amazing GD Level"
 desc: "A challenging level with jump orbs and portals"
+author: "AuthorName"
+version: "1"                 # Level version (string)
 song: "123456"
 bg: "#000000"
 gnd: "#ffffff"
+length: "5000"              # Level length (in pixels)
+difficulty: "5"             # Difficulty (1-10)
+secretCoins: "3"            # Number of secret coins
+featured: "0"               # Featured flag (0/1)
+official: "0"               # Official level flag (0/1)
 
 level = [
 id: "1", col: "1", pos: "0,0", gid: "", lay: "1", ext: "notouch"
