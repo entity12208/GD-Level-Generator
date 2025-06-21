@@ -2,7 +2,7 @@ name: "Example Level"
 desc: "10 blocks, spike, and upside-down portal"
 author: "YourName"
 version: "1"
-song: "120"  
+song: "120"
 bg: "#1a1a1a"
 gnd: "#333333"
 length: "1500"
@@ -15,18 +15,18 @@ songVolume: "100"
 reserved: "0"
 
 level = [
-id: "1", col: "1", pos: "0,0", gid: "", lay: "1", ext: ""
-id: "1", col: "1", pos: "100,0", gid: "", lay: "1", ext: ""
-id: "1", col: "1", pos: "200,0", gid: "", lay: "1", ext: ""
-id: "1", col: "1", pos: "300,0", gid: "", lay: "1", ext: ""
-id: "1", col: "1", pos: "400,0", gid: "", lay: "1", ext: ""
-id: "1", col: "1", pos: "500,0", gid: "", lay: "1", ext: ""
-id: "1", col: "1", pos: "600,0", gid: "", lay: "1", ext: ""
-id: "1", col: "1", pos: "700,0", gid: "", lay: "1", ext: ""
-id: "1", col: "1", pos: "800,0", gid: "", lay: "1", ext: ""
-id: "1", col: "1", pos: "900,0", gid: "", lay: "1", ext: ""
+    [id: 1, col: 1, pos: 0,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
+    [id: 1, col: 1, pos: 100,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
+    [id: 1, col: 1, pos: 200,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
+    [id: 1, col: 1, pos: 300,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
+    [id: 1, col: 1, pos: 400,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
+    [id: 1, col: 1, pos: 500,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
+    [id: 1, col: 1, pos: 600,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
+    [id: 1, col: 1, pos: 700,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
+    [id: 1, col: 1, pos: 800,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
+    [id: 1, col: 1, pos: 900,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
 
-id: "7", col: "3", pos: "1000,0", gid: "", lay: "1", ext: ""
+    [id: 7, col: 3, pos: 1000,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],  # Spike
 
-id: "10", col: "2", pos: "1100,50", gid: "", lay: "1", ext: "", rot: "180", scale: "1"
+    [id: 10, col: 2, pos: 1100,0, gid: -1, lay: 1, ext: "", rot: 180, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0]  # Upside-down portal
 ]
