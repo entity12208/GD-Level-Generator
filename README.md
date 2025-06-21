@@ -63,7 +63,7 @@ Define your objects inside a `level` list. Each object is enclosed in square bra
 
 ---
 
-## Example `level_input.txt`
+## Basic `level_input.txt` (formatted correctly)
 
 ```txt
 name: "Example Level"
