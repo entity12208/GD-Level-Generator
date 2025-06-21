@@ -42,7 +42,7 @@ Define your objects inside a `level` list. Each object is enclosed in square bra
 | `pos`     | Two Integers (comma-separated) | X, Y coordinates in the level | `100,0`          |
 | `gid`     | Integer | Group ID (`-1` if none)                | `-1`             |
 | `lay`     | Integer | Editor layer                           | `1`              |
-| `ext`     | String  | Extras (comma-separated, or `""` if none) | `"notouch,hidden"` or `""` |
+| `ext`     | String  | Extras (comma-separated, or `""` if none) | `""` |
 | `rot`     | Number  | Rotation in degrees                    | `180`            |
 | `scale`   | Number  | Scale multiplier                      | `1`              |
 | `movx`    | Number  | Movement speed on X-axis               | `0`              |
