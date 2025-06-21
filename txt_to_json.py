@@ -1,15 +1,6 @@
 import re
 import json
 
-def parse_pos(pos_str):
-    parts = pos_str.split(",")
-    if len(parts) != 2:
-        return [0, 0]
-    try:
-        return [float(parts[0]), float(parts[1])]
-    except:
-        return [0, 0]
-
 def parse_level_input_txt(filepath="level_input.txt"):
     level = {
         "level": []
@@ -24,32 +15,38 @@ def parse_level_input_txt(filepath="level_input.txt"):
         line = line.strip()
         if not line:
             continue
+
         if line.startswith("level = ["):
             level_array_started = True
             continue
+
         if level_array_started:
             if line == "]":
                 level_array_started = False
                 continue
 
-            # Parse object line fields separated by commas
             obj = {
                 "id": 0, "col": 0, "pos": [0, 0], "gid": -1, "lay": 1, "ext": "",
                 "rot": 0, "scale": 1, "movx": 0, "movy": 0, "movd": 0, "movt": 0, "movdelay": 0
             }
 
-            parts = [p.strip() for p in line.split(",")]
-            for part in parts:
-                if not part:
-                    continue
-                if ":" not in part:
-                    continue
-                key, val = part.split(":", 1)
+            # Remove brackets and trailing commas
+            inner = line.lstrip('[').rstrip('],')
+
+            # Regex to capture key:value pairs including pos which can have commas
+            pairs = re.findall(r'(\w+):\s*([^,\]]+(?:,[^,\]]+)*)', inner)
+
+            for key, val in pairs:
                 key = key.strip()
-                val = val.strip().strip('"')
+                val = val.strip().strip('"').strip("'")
 
                 if key == "pos":
-                    obj["pos"] = parse_pos(val)
+                    parts = val.split(',')
+                    if len(parts) == 2:
+                        try:
+                            obj["pos"] = [int(parts[0].strip()), int(parts[1].strip())]
+                        except:
+                            obj["pos"] = [0, 0]
                 elif key in ("id", "col", "lay", "movt"):
                     obj[key] = int(val) if val.isdigit() else 0
                 elif key == "gid":
