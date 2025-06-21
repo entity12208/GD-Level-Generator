@@ -1,6 +1,6 @@
 # Level Input File Format Guide
 
-This guide explains how to create a valid `level_input.txt` file for the GD-Level-Generator pipeline to produce Geometry Dash levels compatible with GDShare.
+This guide explains how any common AI can create a valid `level_input.txt` file to produce Geometry Dash levels using GDShare.
 
 ---
 
@@ -88,3 +88,4 @@ level = [
     [id: 7, col: 3, pos: 1100,0, gid: -1, lay: 1, ext: "", rot: 0, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0],
     [id: 10, col: 2, pos: 1200,0, gid: -1, lay: 1, ext: "", rot: 180, scale: 1, movx: 0, movy: 0, movd: 0, movt: 0, movdelay: 0]
 ]
+```
