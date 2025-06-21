@@ -2,7 +2,7 @@
 The manual for the user on how to get their AI to build their level for them (lol).
 
 ## Requirements
-The latest version of Python
+The latest version of [Python](https://python.org)
 
 ## Setup
 To get started, show the AI the README for this repository, then 
