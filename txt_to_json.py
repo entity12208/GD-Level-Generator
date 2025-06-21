@@ -8,7 +8,8 @@ def parse_level_input_txt(filepath="level_input.txt"):
     with open(filepath, "r") as f:
         lines = f.read().splitlines()
 
-    meta_pattern = re.compile(r'^(\w+):\s*"(.*)"$')
+    # Match `key: value` where value can be quoted or unquoted
+    meta_pattern = re.compile(r'^(\w+):\s*(?:"([^"]*)"|(.*))$')
     level_array_started = False
 
     for line in lines:
@@ -19,39 +20,48 @@ def parse_level_input_txt(filepath="level_input.txt"):
         if line.startswith("level = ["):
             level_array_started = True
             continue
-
         if level_array_started:
             if line == "]":
                 level_array_started = False
                 continue
 
+            # Parse object lines like [id: 1, pos: 60,80], etc.
             obj = {
-                "id": 0, "col": 0, "pos": [0, 0], "gid": -1, "lay": 1, "ext": "",
-                "rot": 0, "scale": 1, "movx": 0, "movy": 0, "movd": 0, "movt": 0, "movdelay": 0
+                "id": 0,
+                "col": 0,
+                "pos": [0, 0],
+                "gid": -1,
+                "lay": 1,
+                "ext": "",
+                "rot": 0,
+                "scale": 1,
+                "movx": 0,
+                "movy": 0,
+                "movd": 0,
+                "movt": 0,
+                "movdelay": 0
             }
 
-            # Remove brackets and trailing commas
-            inner = line.lstrip('[').rstrip('],')
-
-            # Regex to capture key:value pairs including pos which can have commas
-            pairs = re.findall(r'(\w+):\s*([^,\]]+(?:,[^,\]]+)*)', inner)
-
-            for key, val in pairs:
+            parts = [p.strip() for p in line.split(",")]
+            for part in parts:
+                if not part or ":" not in part:
+                    continue
+                key, val = part.split(":", 1)
                 key = key.strip()
-                val = val.strip().strip('"').strip("'")
+                val = val.strip().strip('"')
 
                 if key == "pos":
-                    parts = val.split(',')
-                    if len(parts) == 2:
+                    coords = val.split(",")
+                    if len(coords) == 2:
                         try:
-                            obj["pos"] = [int(parts[0].strip()), int(parts[1].strip())]
+                            obj["pos"] = [float(coords[0]), float(coords[1])]
                         except:
                             obj["pos"] = [0, 0]
-                elif key in ("id", "col", "lay", "movt"):
+                elif key in ("id","col","lay","movt"):
                     obj[key] = int(val) if val.isdigit() else 0
                 elif key == "gid":
                     obj[key] = int(val) if val.isdigit() else -1
-                elif key in ("rot", "scale", "movx", "movy", "movd", "movdelay"):
+                elif key in ("rot","scale","movx","movy","movd","movdelay"):
                     try:
                         obj[key] = float(val)
                     except:
@@ -64,11 +74,14 @@ def parse_level_input_txt(filepath="level_input.txt"):
         else:
             m = meta_pattern.match(line)
             if m:
-                key, val = m.group(1), m.group(2)
-                level[key] = val
+                key = m.group(1)
+                val = m.group(2) if m.group(2) is not None else m.group(3)
+                level[key] = val.strip()
 
-    # Fill defaults if missing
+    # Fill defaults for missing top-level properties
     defaults = {
+        "name": "Untitled",
+        "desc": "",
         "author": "Unknown",
         "version": "1",
         "length": "5000",
@@ -79,10 +92,12 @@ def parse_level_input_txt(filepath="level_input.txt"):
         "creatorID": "0",
         "songVolume": "100",
         "reserved": "0",
+        "bg": "0",
+        "gnd": "0",
+        "song": "0"
     }
-    for key, val in defaults.items():
-        if key not in level:
-            level[key] = val
+    for key, default_val in defaults.items():
+        level.setdefault(key, default_val)
 
     return level
 
