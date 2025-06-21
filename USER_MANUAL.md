@@ -10,4 +10,5 @@ ask them to make a level using it. Once they have made the **text** file, downlo
 in that order:
 - `python txt_to_json.py`
 - `python json_to_gdr.py`
+
 Once done, use GDShare to inport the `.gdr` file into GD as a level.
