@@ -1,18 +1,32 @@
-name: "My Amazing GD Level"
-desc: "A challenging level with jump orbs and portals"
-author: "AuthorName"
-version: "1"                 # Level version (string)
-song: "123456"
-bg: "#000000"
-gnd: "#ffffff"
-length: "5000"              # Level length (in pixels)
-difficulty: "5"             # Difficulty (1-10)
-secretCoins: "3"            # Number of secret coins
-featured: "0"               # Featured flag (0/1)
-official: "0"               # Official level flag (0/1)
+name: "Example Level"
+desc: "10 blocks, spike, and upside-down portal"
+author: "YourName"
+version: "1"
+song: "120"  
+bg: "#1a1a1a"
+gnd: "#333333"
+length: "1500"
+difficulty: "3"
+secretCoins: "0"
+featured: "0"
+official: "0"
+creatorID: "0"
+songVolume: "100"
+reserved: "0"
 
 level = [
-id: "1", col: "1", pos: "0,0", gid: "", lay: "1", ext: "notouch"
-id: "2", col: "2", pos: "10,5", gid: "", lay: "1", ext: "passable"
-id: "3", col: "3", pos: "20,10", gid: "5", lay: "2", ext: ""
+id: "1", col: "1", pos: "0,0", gid: "", lay: "1", ext: ""
+id: "1", col: "1", pos: "100,0", gid: "", lay: "1", ext: ""
+id: "1", col: "1", pos: "200,0", gid: "", lay: "1", ext: ""
+id: "1", col: "1", pos: "300,0", gid: "", lay: "1", ext: ""
+id: "1", col: "1", pos: "400,0", gid: "", lay: "1", ext: ""
+id: "1", col: "1", pos: "500,0", gid: "", lay: "1", ext: ""
+id: "1", col: "1", pos: "600,0", gid: "", lay: "1", ext: ""
+id: "1", col: "1", pos: "700,0", gid: "", lay: "1", ext: ""
+id: "1", col: "1", pos: "800,0", gid: "", lay: "1", ext: ""
+id: "1", col: "1", pos: "900,0", gid: "", lay: "1", ext: ""
+
+id: "7", col: "3", pos: "1000,0", gid: "", lay: "1", ext: ""
+
+id: "10", col: "2", pos: "1100,50", gid: "", lay: "1", ext: "", rot: "180", scale: "1"
 ]
