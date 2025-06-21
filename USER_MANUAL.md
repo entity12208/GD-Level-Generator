@@ -1,3 +1,7 @@
+---
+title: "User Manual"
+---
+
 # User Manual
 The manual for the user on how to get their AI to build their level for them (lol).
 
