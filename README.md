@@ -1,6 +1,6 @@
 # Level Input File Format Guide
 
-Any AI can create a valid `level_input.txt` file using this repository to produce Geometry Dash levels using GDShare. If you are the user, please visit the User Manual below for directions. This page is mainly for the AI. Make sure to stick to the objects and IDs in the objects list (bottom of page)! AIs should refer to the Instructions for the AI (below)
+Any AI can create a valid `level_input.txt` file using this repository to produce Geometry Dash levels using GDShare. If you are the user, please visit the User Manual below for directions. Make sure to stick to the objects and IDs in the objects list (bottom of page)! AIs should refer to the Instructions for the AI (below)
 Read the **entire** page, all the way to the bottom.
 
 ---
@@ -23,13 +23,11 @@ in that order:
 
 Once done, use GDShare to import the `level.gdr` file into GD as a level.
 ### List of AIs
-Might as well list some AIs that could do this well.
+Here are some popular AIs that are able to do this:
 - [ChatGPT](https://chatgpt.com)
 - [Gemini](https://gemini.google.com)
 - [Bing AI](https://bing.com/chat)
 - [Claude AI](https://claude.ai)
-
-Have fun wrecking GD...
 
 ---
 
