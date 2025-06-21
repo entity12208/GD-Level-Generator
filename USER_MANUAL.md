@@ -11,7 +11,7 @@ in that order:
 - `python txt_to_json.py`
 - `python json_to_gdr.py`
 
-Once done, use GDShare to import the `.gdr` file into GD as a level.
+Once done, use GDShare to import the `level.gdr` file into GD as a level.
 ## List of AIs
 Might as well list some AIs that could do this well.
 - [ChatGPT](https://chatgpt.com)
