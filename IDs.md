@@ -9,3 +9,4 @@
 | **Slopes**         | Slope                | 289           |
 | **Portals**        | Mini Portal          | 101           |
 |                    | Normal Size Portal   | 99            |
+| **Pickup**         | User Coin            | 1329          |
